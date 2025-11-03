@@ -18,8 +18,8 @@ export default function ChangePassword() {
 
   return (
     <div style={{ maxWidth: 600, margin: 'auto', padding: '20px' }}>
-      <Text align="center" weight={700} size="xl" mb={10}>Change Password</Text>
-      <Text align="center" color="dimmed" size="sm" mb={30}>
+      <Text ta="center" fw={700} size="xl" mb={10}>Change Password</Text>
+      <Text ta="center" color="dimmed" size="sm" mb={30}>
         Manage your password settings
       </Text>
 
