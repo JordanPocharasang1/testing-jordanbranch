@@ -3,7 +3,7 @@
 import React, { useState } from 'react';
 import { Card, Text, Button, PasswordInput, Space } from '@mantine/core';
 
-export default function ChangePassword() {
+export default function ChangePassword({ onGoBack }) {
   const [currentPassword, setCurrentPassword] = useState('');
   const [newPassword, setNewPassword] = useState('');
   const [confirmPassword, setConfirmPassword] = useState('');
@@ -48,6 +48,11 @@ export default function ChangePassword() {
         <Space h="md" />
         <Button fullWidth variant="outline" color="blue" onClick={handleSubmit}>
           Change Password
+        </Button>
+
+        <Space h="md" />
+        <Button fullWidth variant="outline" color="gray" onClick={onGoBack}>
+          Go Back
         </Button>
       </Card>
     </div>
