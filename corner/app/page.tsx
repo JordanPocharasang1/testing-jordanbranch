@@ -1,10 +1,9 @@
 "use client";
 
 import React, { useState } from "react";
-import Link from "next/link";
 import { Card, Avatar, Text, Button, Group, Space } from "@mantine/core";
-import ChangePassword from "./changepassword";
-import DeleteAccount from "./deleteaccount";
+import ChangePassword from "./changepassword/page";
+import DeleteAccount from "./deleteaccount/page";
 
 export default function Home() {
   const [currentView, setCurrentView] = useState("account");
@@ -27,18 +26,18 @@ export default function Home() {
     <div style={{ maxWidth: 600, margin: "auto", padding: "20px" }}>
       {currentView === "account" && (
         <>
-          <Text align="center" weight={700} size="xl" mb={10}>
+          <Text ta="center" fw={700} size="xl" mb={10}>
             Account Settings
           </Text>
-          <Text align="center" color="dimmed" size="sm" mb={30}>
+          <Text ta="center" color="dimmed" size="sm" mb={30}>
             Manage your profile and account preferences
           </Text>
 
           <Card shadow="sm" padding="lg">
-            <Group position="left" spacing="lg">
+            <Group p="left" gap="lg">
               <Avatar src={user.profilePicture} size={100} radius="50%" />
               <div>
-                <Text size="lg" weight={500}>
+                <Text size="lg" fw={500}>
                   {user.name}
                 </Text>
                 <Text color="dimmed">{user.email}</Text>
