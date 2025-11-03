@@ -3,7 +3,7 @@
 import React, { useState } from 'react';
 import { Card, Text, Button, Modal, Group } from '@mantine/core';
 
-export default function DeleteAccount() {
+export default function DeleteAccount({ onGoBack }) {
   const [modalOpened, setModalOpened] = useState(false);
 
   const handleDeleteClick = () => {
@@ -57,6 +57,11 @@ export default function DeleteAccount() {
           </Button>
         </Group>
       </Modal>
+
+      <Space h="md" />
+      <Button fullWidth variant="outline" color="gray" onClick={onGoBack}>
+        Go Back
+      </Button>
     </div>
   );
 }
