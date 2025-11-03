@@ -16,6 +16,10 @@ export default function Home() {
     setCurrentView("deleteAccount");
   };
 
+  const handleGoBack = () => {
+    setCurrentView("account");
+  };
+
   const user = {
     profilePicture: "",
     name: "John Doe",
@@ -67,8 +71,8 @@ export default function Home() {
         </>
       )}
 
-      {currentView === "changePassword" && <ChangePassword />}
-      {currentView === "deleteAccount" && <DeleteAccount />}
+      {currentView === "changePassword" && <ChangePassword onGoBack={handleGoBack} />}
+      {currentView === "deleteAccount" && <DeleteAccount onGoBack={handleGoBack} />}
     </div>
   );
 }
